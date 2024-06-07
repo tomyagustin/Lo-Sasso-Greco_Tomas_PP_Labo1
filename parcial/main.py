@@ -10,7 +10,8 @@ def main():
                 archivo = cargar_archivo("parcial/data.json")
                 print("\nArchivo creado exitosamente. ")
             case '2':
-                imprimir_lista(archivo)
+                if bandera == True:
+                    imprimir_lista(archivo)
             case '3':
                 if bandera == True:
                     servicios_actualizados = asignar_totales(archivo)
