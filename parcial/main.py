@@ -32,5 +32,7 @@ def main():
             case '7':
                 print("Programa finalizado.\n")
                 break
+            case _:
+                print("La opcion no existe")
 
 main()

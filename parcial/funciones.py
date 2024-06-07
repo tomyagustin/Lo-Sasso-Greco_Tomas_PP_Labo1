@@ -58,7 +58,7 @@ def asignar_totales(servicios:list)->list:
         servicios (list): lista de los servicios
 
     Returns:
-        list:
+        list: lista de los servicios
     """
     calcular_total = lambda servicio: float(servicio['cantidad']) * float(servicio["precioUnitario"])
 
@@ -72,8 +72,8 @@ def filtrar_por_tipo(servicios:list, tipo_seleccionado:str, archivo_salida:str):
 
     Args:
         servicios (list): lista de los servicios
-        tipo_seleccionado (str): 
-        archivo_salida (str): 
+        tipo_seleccionado (str): clave del tipo de servicio seleccionado
+        archivo_salida (str): ruta del archivo para generar
     """
     servicios_filtrados = []
     for servicio in servicios:
@@ -89,7 +89,7 @@ def ordenar(servicios:list)->list:
         servicios (list): lista de los servicios
 
     Returns:
-        list: 
+        list: lista de los servicios
     """
     for i in range(len(servicios)-1):
         for j in range(i+1, len(servicios)):
@@ -107,7 +107,7 @@ def mostrar_servicios_ordenados(servicios:list)->list:
         servicios (list): lista de los servicios
 
     Returns:
-        list: 
+        list: lista de los servicios ordenada por descripcion en ascendente
     """
     servicios_ordenados = ordenar(servicios)
 
@@ -119,8 +119,8 @@ def guardar_servicios(servicios_ordenados:list , archivo_salida:str):
     """Guarda los servicios de forma ordenada en un archivo
 
     Args:
-        servicios_ordenados (list): _description_
-        archivo_salida (str): _description_
+        servicios_ordenados (list): servicios ordenada por descripcion en ascendente
+        archivo_salida (str): ruta del archivo para generar
     """
     with open(archivo_salida, 'w') as archivo:
         json.dump(servicios_ordenados, archivo, indent = 4)
