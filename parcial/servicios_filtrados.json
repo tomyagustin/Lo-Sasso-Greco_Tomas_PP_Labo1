@@ -1,0 +1,58 @@
+[
+    {
+        "id_servicio": "51",
+        "descripcion": "ensamble vestido",
+        "tipo": "2",
+        "precioUnitario": "860",
+        "cantidad": "25",
+        "totalServicio": "0"
+    },
+    {
+        "id_servicio": "54",
+        "descripcion": "boton camisa",
+        "tipo": "2",
+        "precioUnitario": "145",
+        "cantidad": "120",
+        "totalServicio": "0"
+    },
+    {
+        "id_servicio": "60",
+        "descripcion": "cambio boton",
+        "tipo": "2",
+        "precioUnitario": "70",
+        "cantidad": "10",
+        "totalServicio": "0"
+    },
+    {
+        "id_servicio": "63",
+        "descripcion": "boton camisa",
+        "tipo": "2",
+        "precioUnitario": "145",
+        "cantidad": "120",
+        "totalServicio": "0"
+    },
+    {
+        "id_servicio": "72",
+        "descripcion": "boton camisa",
+        "tipo": "2",
+        "precioUnitario": "145",
+        "cantidad": "60",
+        "totalServicio": "0"
+    },
+    {
+        "id_servicio": "73",
+        "descripcion": "cambio boton",
+        "tipo": "2",
+        "precioUnitario": "70",
+        "cantidad": "25",
+        "totalServicio": "0"
+    },
+    {
+        "id_servicio": "74",
+        "descripcion": "ensamble vestido",
+        "tipo": "2",
+        "precioUnitario": "860",
+        "cantidad": "15",
+        "totalServicio": "0"
+    }
+]

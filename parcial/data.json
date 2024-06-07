@@ -1,0 +1,202 @@
+[
+    {
+        "id_servicio": "50",
+        "descripcion": "ruedo pantalon",
+        "tipo": "1",
+        "precioUnitario": "250",
+        "cantidad": "2",
+        "totalServicio": "0"
+    },
+    {
+        "id_servicio": "51",
+        "descripcion": "ensamble vestido",
+        "tipo": "2",
+        "precioUnitario": "860",
+        "cantidad": "25",
+        "totalServicio": "0"
+    },
+    {
+        "id_servicio": "52",
+        "descripcion": "costura correa mochila",
+        "tipo": "3",
+        "precioUnitario": "450.25",
+        "cantidad": "60",
+        "totalServicio": "0"
+    },
+    {
+        "id_servicio": "53",
+        "descripcion": "cierre pantalon",
+        "tipo": "1",
+        "precioUnitario": "600",
+        "cantidad": "4",
+        "totalServicio": "0"
+    },
+    {
+        "id_servicio": "54",
+        "descripcion": "boton camisa",
+        "tipo": "2",
+        "precioUnitario": "145",
+        "cantidad": "120",
+        "totalServicio": "0"
+    },
+    {
+        "id_servicio": "55",
+        "descripcion": "forro piloto",
+        "tipo": "3",
+        "precioUnitario": "324.66",
+        "cantidad": "156",
+        "totalServicio": "0"
+    },
+    {
+        "id_servicio": "56",
+        "descripcion": "vicera",
+        "tipo": "3",
+        "precioUnitario": "450",
+        "cantidad": "180",
+        "totalServicio": "0"
+    },
+    {
+        "id_servicio": "57",
+        "descripcion": "costura remera",
+        "tipo": "3",
+        "precioUnitario": "650",
+        "cantidad": "60",
+        "totalServicio": "0"
+    },
+    {
+        "id_servicio": "58",
+        "descripcion": "ensamble bolso",
+        "tipo": "3",
+        "precioUnitario": "450.25",
+        "cantidad": "80",
+        "totalServicio": "0"
+    },
+    {
+        "id_servicio": "59",
+        "descripcion": "cambio cierre",
+        "tipo": "1",
+        "precioUnitario": "700",
+        "cantidad": "2",
+        "totalServicio": "0"
+    },
+    {
+        "id_servicio": "60",
+        "descripcion": "cambio boton",
+        "tipo": "2",
+        "precioUnitario": "70",
+        "cantidad": "10",
+        "totalServicio": "0"
+    },
+    {
+        "id_servicio": "61",
+        "descripcion": "aplique capucha",
+        "tipo": "1",
+        "precioUnitario": "260",
+        "cantidad": "1",
+        "totalServicio": "0"
+    },
+    {
+        "id_servicio": "62",
+        "descripcion": "ruedo pantalon",
+        "tipo": "1",
+        "precioUnitario": "250",
+        "cantidad": "2",
+        "totalServicio": "0"
+    },
+    {
+        "id_servicio": "63",
+        "descripcion": "boton camisa",
+        "tipo": "2",
+        "precioUnitario": "145",
+        "cantidad": "120",
+        "totalServicio": "0"
+    },
+    {
+        "id_servicio": "64",
+        "descripcion": "ensamble bolso",
+        "tipo": "3",
+        "precioUnitario": "450.25",
+        "cantidad": "50",
+        "totalServicio": "0"
+    },
+    {
+        "id_servicio": "65",
+        "descripcion": "cambio cierre",
+        "tipo": "1",
+        "precioUnitario": "700",
+        "cantidad": "2",
+        "totalServicio": "0"
+    },
+    {
+        "id_servicio": "66",
+        "descripcion": "forro campera",
+        "tipo": "3",
+        "precioUnitario": "365.60",
+        "cantidad": "150",
+        "totalServicio": "0"
+    },
+    {
+        "id_servicio": "67",
+        "descripcion": "aplique capucha",
+        "tipo": "1",
+        "precioUnitario": "260",
+        "cantidad": "1",
+        "totalServicio": "0"
+    },
+    {
+        "id_servicio": "68",
+        "descripcion": "vicera",
+        "tipo": "3",
+        "precioUnitario": "450",
+        "cantidad": "160",
+        "totalServicio": "0"
+    },
+    {
+        "id_servicio": "69",
+        "descripcion": "cambio cierre",
+        "tipo": "1",
+        "precioUnitario": "700",
+        "cantidad": "1",
+        "totalServicio": "0"
+    },
+    {
+        "id_servicio": "70",
+        "descripcion": "cierre pantalon",
+        "tipo": "1",
+        "precioUnitario": "600",
+        "cantidad": "2",
+        "totalServicio": "0"
+    },
+    {
+        "id_servicio": "71",
+        "descripcion": "ensamble bolso",
+        "tipo": "3",
+        "precioUnitario": "450.25",
+        "cantidad": "40",
+        "totalServicio": "0"
+    },
+    {
+        "id_servicio": "72",
+        "descripcion": "boton camisa",
+        "tipo": "2",
+        "precioUnitario": "145",
+        "cantidad": "60",
+        "totalServicio": "0"
+    },
+    {
+        "id_servicio": "73",
+        "descripcion": "cambio boton",
+        "tipo": "2",
+        "precioUnitario": "70",
+        "cantidad": "25",
+        "totalServicio": "0"
+    },
+    {
+        "id_servicio": "74",
+        "descripcion": "ensamble vestido",
+        "tipo": "2",
+        "precioUnitario": "860",
+        "cantidad": "15",
+        "totalServicio": "0"
+    }
+]
