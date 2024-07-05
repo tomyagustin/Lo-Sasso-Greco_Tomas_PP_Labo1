@@ -89,15 +89,15 @@ coordenadas_casillas_fila2 = coordenadas_rectangulos[8:]
 imagen_personaje = pygame.image.load("desafio_carrera_utn/personaje.jpg")
 imagen_personaje = pygame.transform.scale(imagen_personaje, (50, 50))
 
-def verificar_respuesta(respuesta, pregunta_actual):
+def verificar_respuesta(respuesta, pregunta_actual, score, posicion_personaje):
     """ Funcion para verificar la respuesta del jugador
 
     Args:
         respuesta: respuesta correcta o incorrecta ingresada por el jugador
         pregunta_actual : indice de la pregunta actual
+        score: puntaje actual
+        posicion_personaje: posición actual del personaje
     """
-    global score, posicion_personaje
-
     if posicion_personaje < len(coordenadas_casillas_fila1):
         if respuesta == preguntas[pregunta_actual][4]:
             score += 10
@@ -119,14 +119,26 @@ def verificar_respuesta(respuesta, pregunta_actual):
             if posicion_personaje >= len(coordenadas_casillas_fila1) + len(coordenadas_casillas_fila2):
                 posicion_personaje = len(coordenadas_casillas_fila1) + len(coordenadas_casillas_fila2) - 1
 
-def reiniciar_pregunta(pregunta_actual):
+    return score, posicion_personaje
+
+def reiniciar_pregunta(pregunta_actual, score, tiempo_restante, pregunta, tema, etiqueta_pregunta, etiqueta_tema, opcion_a, opcion_b, opcion_c, puntaje, etiqueta_tiempo):
     """
     Función para reiniciar la pregunta y actualizar las variables correspondientes
 
     Args:
         pregunta_actual: indice de la pregunta actual
+        score: puntaje actual
+        tiempo_restante: tiempo restante para la pregunta
+        pregunta: texto de la pregunta actual
+        tema: tema de la pregunta actual
+        etiqueta_pregunta: etiqueta con el texto de la pregunta
+        etiqueta_tema: etiqueta con el tema
+        opcion_a: opcion A de la pregunta
+        opcion_b: opcion B de la pregunta
+        opcion_c: opcion C de la pregunta
+        puntaje: etiqueta del puntaje
+        etiqueta_tiempo: etiqueta del tiempo restante
     """
-    global tiempo_restante, pregunta, tema, etiqueta_pregunta, etiqueta_tema, opcion_a, opcion_b, opcion_c, puntaje
     tiempo_restante = 5
     if pregunta_actual >= len(preguntas):
         guardar_puntaje(nombre_usuario)
@@ -142,6 +154,8 @@ def reiniciar_pregunta(pregunta_actual):
     opcion_c = fuente.render("C. " + preguntas[pregunta_actual][3], True, BLACK)
     puntaje = fuente.render("Puntaje: " + str(score), True, BLACK)
     etiqueta_tiempo = fuente.render("Tiempo: " + str(tiempo_restante), True, BLACK)
+
+    return tiempo_restante, pregunta, tema, etiqueta_pregunta, etiqueta_tema, opcion_a, opcion_b, opcion_c, puntaje, etiqueta_tiempo
 
 def guardar_puntaje(nombre):
     """Funcion para guardar el puntaje en un archivo JSON, si ya existe el archivo lo lee, y si no lo crea. Guarda el top 10 de forma descendente 
@@ -275,7 +289,7 @@ while flag_correr:
                 guardar_puntaje(nombre_usuario)
                 mostrar_mejores_puntajes()
             else:
-                reiniciar_pregunta(pregunta_actual)
+                tiempo_restante, pregunta, tema, etiqueta_pregunta, etiqueta_tema, opcion_a, opcion_b, opcion_c, puntaje, etiqueta_tiempo = reiniciar_pregunta(pregunta_actual, score, tiempo_restante, pregunta, tema, etiqueta_pregunta, etiqueta_tema, opcion_a, opcion_b, opcion_c, puntaje, etiqueta_tiempo)
 
     lista_eventos = pygame.event.get()
     for event in lista_eventos:
@@ -299,32 +313,32 @@ while flag_correr:
                     flag_correr = False
             else:
                 if 50 <= x <= 200 and 200 <= y <= 230:
-                    verificar_respuesta('a', pregunta_actual)
+                    score, posicion_personaje = verificar_respuesta('a', pregunta_actual, score, posicion_personaje)
                     pregunta_actual += 1
                     if pregunta_actual >= len(preguntas):
                         flag_correr = False
                         guardar_puntaje(nombre_usuario)
                         mostrar_mejores_puntajes()
                     else:
-                        reiniciar_pregunta(pregunta_actual)
+                        tiempo_restante, pregunta, tema, etiqueta_pregunta, etiqueta_tema, opcion_a, opcion_b, opcion_c, puntaje, etiqueta_tiempo = reiniciar_pregunta(pregunta_actual, score, tiempo_restante, pregunta, tema, etiqueta_pregunta, etiqueta_tema, opcion_a, opcion_b, opcion_c, puntaje, etiqueta_tiempo)
                 elif 50 <= x <= 200 and 260 <= y <= 280:
-                    verificar_respuesta('b', pregunta_actual)
+                    score, posicion_personaje = verificar_respuesta('b', pregunta_actual, score, posicion_personaje)
                     pregunta_actual += 1
                     if pregunta_actual >= len(preguntas):
                         flag_correr = False
                         guardar_puntaje(nombre_usuario)
                         mostrar_mejores_puntajes()
                     else:
-                        reiniciar_pregunta(pregunta_actual)
+                        tiempo_restante, pregunta, tema, etiqueta_pregunta, etiqueta_tema, opcion_a, opcion_b, opcion_c, puntaje, etiqueta_tiempo = reiniciar_pregunta(pregunta_actual, score, tiempo_restante, pregunta, tema, etiqueta_pregunta, etiqueta_tema, opcion_a, opcion_b, opcion_c, puntaje, etiqueta_tiempo)
                 elif 50 <= x <= 200 and 310 <= y <= 335:
-                    verificar_respuesta('c', pregunta_actual)
+                    score, posicion_personaje = verificar_respuesta('c', pregunta_actual, score, posicion_personaje)
                     pregunta_actual += 1
                     if pregunta_actual >= len(preguntas):
                         flag_correr = False
                         guardar_puntaje(nombre_usuario)
                         mostrar_mejores_puntajes()
                     else:
-                        reiniciar_pregunta(pregunta_actual)
+                        tiempo_restante, pregunta, tema, etiqueta_pregunta, etiqueta_tema, opcion_a, opcion_b, opcion_c, puntaje, etiqueta_tiempo = reiniciar_pregunta(pregunta_actual, score, tiempo_restante, pregunta, tema, etiqueta_pregunta, etiqueta_tema, opcion_a, opcion_b, opcion_c, puntaje, etiqueta_tiempo)
 
     if posicion_personaje < len(coordenadas_casillas_fila1):
         pos_personaje = coordenadas_casillas_fila1[posicion_personaje]
